@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: beige;
+  color: white; 
+}
+
+.ul-navbar {
+  list-style-type: none;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 2px solid white;
+  backdrop-filter: blur(2.5px);
+  display: flex;
+  align-items: center;
+  height: 60px;
+  justify-content: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: 5px 5px 5px black;
+}
+
+.background-video {
+    position: fixed; /* 'fixed' lebih baik agar video tetap diam saat scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* 100% dari tinggi viewport */
+    object-fit: cover; /* Kunci utama: paksa video menutupi area */
+    z-index: -1; /* Posisikan video di lapisan paling belakang */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan 50% transparansi */
+    z-index: 0; /* Posisikan di atas video tapi di bawah konten */
+}
+
+
+.main-content {
+  display: flex;
+  padding-top: 60px;
+  min-height: 100vh;
+}
+
+
+.sidebar {
+  flex: 0 0 29%; 
+  min-height: calc(100vh - 60px);
+  backdrop-filter: blur(1px);
+  border-right: 1px solid white;
+  padding: 20px;
+  text-align: center;
+
+}
+
+.me {
+  height: 200px;
+  width: 200px;
+  margin-top: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.identitas ul {
+  list-style: none;
+  margin-top: 60px;
+  font-size: larger;
+  text-shadow: 2px 2px 4px black;
+  text-align: left;
+  display: inline-block;
+  margin-left: 60px;
+}
+
+
+.content-area {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto; 
+  text-shadow: 2px 2px 4px black;
+}
+
+.about, .education {
+  backdrop-filter: blur(1px);
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 100px; 
+  line-height: 1.7;
+  font-size: 19px;
+  margin-top: 40px;
+  border: 2px solid white;
+}
+
+.about h1, .education h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
